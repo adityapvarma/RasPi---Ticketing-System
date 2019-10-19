@@ -1,0 +1,26 @@
+<html>
+ <body>
+<form method='POST'>
+ <input type="submit" name="home" value="Home" formaction="/home_route_tc"></p>
+</form>
+
+<h3>All Transactions</h3>
+<table border="1" cellpadding="5" cellspacing="5">
+<th>Ticket ID</th>
+<th>Amount</th>
+<th>User</th>
+    {% for row in data %}
+        <tr>
+        {% for d in row %}
+            <td>{{ d }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+</body>
+</html>
+
+

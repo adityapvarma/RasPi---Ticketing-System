@@ -1,0 +1,25 @@
+<html>
+ <body>
+ <center>
+	<h1 style='text-align:left;'>Register New User </h1>
+
+   <form action = "/register/check" method = "POST" style='text-align:left;'>
+    <p>Username:<input type = "text" name = "username" />
+	<input type="submit" name="reg" value="Check Availability" formaction='/register/us_check'</p>
+	<h5>{{usern_err_p}}</h5>
+	<p>Name:<input type = "text" name = "name" /></p>
+    <p>Password:<input type = "password" name = "pwd1" /></p>
+	<p>Re-Enter Password:<input type = "password" name = "pwd2" /></p>
+	<p><h5>{{repass_err_p}}</h5></p>	
+    
+	Account Type:<input type=radio name="atype" value='passenger'>Passenger  
+	<input type=radio name="atype" value="public_tr">Public Transport<br>
+	<h5>{{typesel_err_p}}</h5>
+	
+	
+	<p><input type = "submit" name='submit' value = "Register"/>
+	<input type="submit" name="reg" value="Reset" formaction='/register'</p>
+   </form>
+</center>
+   </body>
+</html>

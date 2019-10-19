@@ -1,0 +1,37 @@
+<html>
+ <body>
+<form method='POST'>
+ <input type="submit" name="home" value="Home" formaction="/home_route"></p>
+</form>
+<h3>Pending Tickets</h3>
+<table border="1" cellpadding="5" cellspacing="5">
+<th>Ticket ID</th>
+<th>Amount</th>
+    {% for row in data1 %}
+        <tr>
+        {% for d in row %}
+            <td>{{ d }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+<h3>Completed Journeys</h3>
+<table border="1" cellpadding="5" cellspacing="5">
+<th>Ticket ID</th>
+<th>Amount</th>
+    {% for row in data2 %}
+        <tr>
+        {% for d in row %}
+            <td>{{ d }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+</body>
+</html>
+
+

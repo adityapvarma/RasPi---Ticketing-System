@@ -1,0 +1,41 @@
+<html>
+ <body>
+ 
+	<form method="POST">
+	<input type="submit" name="logout" value="Logout" formaction="/"></p>
+	<input type="submit" name="view" value="View Tickets" formaction="/home_pass/view"></p>
+	
+	<h3>Welcome {{username}}</h3>
+	<p><h4>Account Balance : {{bal}}</h4> 
+	<input type="submit" name="add_bal" value="Add Balance" formaction="/home/add_balance"></p>
+	<h5>From :</h5>
+	<select name="from">
+	<option value="A">A</option>
+	<option value="B">B</option>
+	<option value="C">C</option>
+	<option value="D">D</option>
+	<option value="E">E</option>
+	<option value="F">F</option>
+	</select>
+	
+	<h5>To :</h5>
+	<select name="to">
+	<option value="A">A</option>
+	<option value="B">B</option>
+	<option value="C">C</option>
+	<option value="D">D</option>
+	<option value="E">E</option>
+	<option value="F">F</option>
+	</select>
+	<p>No of Tickets:<input type = "text" name = "no" />
+	<p><input type = "submit" name='submit' value = "Get Ticket Cost" formaction="/home/gen_tick" /></p>
+	<p><input type = "submit" name='submit2' value = "Take Ticket" formaction="/home/tickadd"/></p>
+	</form>
+	
+	<h3>{{cost}}</h3>
+	
+	
+	<h3>{{point_err_p}}</h3>
+  
+ </body>
+</html>
